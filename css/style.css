@@ -23,15 +23,22 @@ main {
 }
 
 .main-item:nth-of-type(1) {
-    border-radius: 1rem 0 0 1rem;
     display: flex;
+}
+
+.main-item:nth-of-type(2)>p {
+    margin-top: -10px;
+}
+
+.main-item:nth-of-type(1),
+.main-item:nth-of-type(1)>img {
+    border-radius: 1rem 0 0 1rem;
 }
 
 .main-item:nth-of-type(1) img {
     width: 100%;
     object-fit: cover;
     object-position: left center;
-    border-radius: 1rem 0 0 1rem;
 }
 
 .main-item:nth-of-type(2) {
@@ -40,7 +47,7 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: 20px;
-    width: 100%;
+    width: calc(100% - 80px);
 }
 
 .post-info {
@@ -59,6 +66,7 @@ main {
 .user-info>img {
     border-radius: 50%;
     width: 40px;
+    height: 40px;
 }
 
 .name-date p:first-of-type {
@@ -76,17 +84,25 @@ main {
     border-radius: 50%;
 }
 
+.share-option:hover {
+    background-color: hsl(212, 23%, 69%);
+}
+
+.share-option:hover svg path {
+    fill: #fff;
+}
+
 h1 {
     font-weight: 700;
-    font-size: 1.75rem;
-    line-height: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
     color: hsl(217, 19%, 35%);
 }
 
 p {
     color: hsl(214, 17%, 51%);
-    line-height: 1.6rem;
-    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font-size: 1rem;
 }
 
 footer {
@@ -98,4 +114,34 @@ footer {
 footer a {
     font-weight: 700;
     color: hsl(217, 19%, 35%);
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .main-item:nth-of-type(2)>p {
+        margin-top: -5px;
+    }
+
+    .main-item:nth-of-type(1),
+    .main-item:nth-of-type(1)>img {
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    h1 {
+        font-size: 1.25rem;
+        line-height: 1.75rem;
+    }
+
+    p {
+        line-height: 1.55rem;
+        font-size: 1.05rem;
+    }
+
+    .post-info {
+        margin-top: 20px;
+    }
 }
