@@ -105,6 +105,10 @@ main {
     display: none;
 }
 
+.share-option i span, .share-option2 i span {
+    display: none;
+}
+
 .share-popup {
     display: none;
     flex-direction: row;
