@@ -49,6 +49,7 @@ main {
     justify-content: center;
     gap: 20px;
     width: calc(100% - 80px);
+    position: relative;
 }
 
 .post-info {
@@ -83,14 +84,67 @@ main {
     background-color: hsl(210, 46%, 95%);
     padding: 10px;
     border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #6E8098;
 }
 
 .share-option:hover {
     background-color: hsl(212, 23%, 69%);
 }
 
-.share-option:hover svg path {
-    fill: #fff;
+.share-option:hover {
+    color: #fff;
+}
+
+.share-popup {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  right: -4.95rem;
+  bottom: 8.15rem;
+  gap: 1rem;
+  align-items: center;
+  background-color: hsl(217, 19%, 35%);
+  padding: 1.25rem 2.75rem;
+  border-radius: .75rem;
+  z-index: 6;
+  justify-content: center;
+  box-shadow: 0 5px 10px 0 hsl(217, 19%, 35%, .25);
+}
+
+.share-popup::after {
+  width: 16px;
+  height: 16px;
+  background-color: hsl(217, 19%, 35%);
+  top: 3.5rem;
+  margin: auto;
+  content: '';
+  position: absolute;
+  transform: rotate(45deg);
+  z-index: -1;
+  box-shadow: 5px 5px 10px 0 hsl(217, 19%, 35%, .15);
+}
+
+.popup-label {
+  color: hsl(212, 23%, 69%);
+  text-transform: uppercase;
+  letter-spacing: .5rem;
+}
+
+.share-icon-list {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.share-icon-list a {
+  color: #fff;
+  text-decoration: none;
 }
 
 h1 {
